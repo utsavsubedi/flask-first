@@ -1,0 +1,14 @@
+
+services:
+  web:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    restart: 
+      always
+    env_file:
+      ./.flaskenv
+    ports:
+      - '5000:5000'
+      
